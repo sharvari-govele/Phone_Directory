@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/h8k-design@latest/dist/index.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/npm/h8k-design@latest/dist/assets/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/h8k-components/dist/h8k-components/h8k-components.esm.js"
+            type="module"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/h8k-components/dist/h8k-components/h8k-components.js"></script>
+</head>
+
+<body>
+<!--HTML content goes here-->
+<h8k-navbar header="Phone Directory"></h8k-navbar>
+
+<div class="mt-40 mb-20">
+    <div>
+        <section class="layout-row justify-content-center">
+            <input type="text" class="white large outlined mx-2" placeholder="Name" id="name" data-testid="name">
+            <input type="number" class="white large outlined mx-2" placeholder="Mobile number" id="mobile"
+                   data-testid="mobile">
+            <input type="email" class="white large outlined mx-2" placeholder="Email" id="email" data-testid="email">
+            <button type="submit" class="secondary flat my-0 mx-2" id="submit" data-testid="submit">Add Contact</button>
+        </section>
+    </div>
+</div>
+
+<div data-testid="error" id="error" class="alert error w-35 mx-auto">
+    Invalid Input!
+</div>
+
+<div class="card w-40 mx-auto">
+    <div class="card-text">
+        <table id="summaryTable" data-testid="summaryTable" class="my-0">
+            <thead>
+            <tr>
+                <th id="nameColumn" data-testid="nameColumn">Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Admin</td>
+                <td>9999999999</td>
+                <td>admin@xyzcompany.com</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+
+<!-- HMR and test infrastructure - DO NOT EDIT -->
+<script src="script.js"></script>
+</html>
